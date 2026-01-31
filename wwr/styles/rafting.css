@@ -1,21 +1,12 @@
 
-
 :root {
-    /* Color palette – soft, girly, but readable */
     --primary-color: #f4a7c1;
-    /* soft rose pink */
     --secondary-color: #c084fc;
-    /* lavender purple */
     --accent1-color: #5a2a4f;
-    /* deep berry (high contrast) */
     --accent2-color: #fff0f5;
-    /* light blush background */
-
-    /* Fonts */
     --heading-font: "Georgia", "Times New Roman", serif;
-    --body-font: "Arial", Helvetica, sans-serif;
+    --body-font: Arial, Helvetica, sans-serif;
 }
-
 
 * {
     margin: 0;
@@ -25,56 +16,43 @@
 
 body {
     font-family: var(--body-font);
+    color: var(--accent1-color);
     background-color: var(--accent2-color);
-    color: var(--accent1-color);
 }
 
-
-header {
-    background-color: var(--primary-color);
-    color: var(--accent1-color);
-    padding: 16px;
-}
-
-header, main, footer {
+header,
+main,
+footer {
     width: 840px;
     margin: 0 auto;
-    padding: 16px;
 }
 
-
-
-
-nav a {
-    text-decoration: none;
-    color: var(--accent1-color);
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: var(--secondary-color);
-}
-
-
-h1, h2 {
+h1,
+h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-p {
-    margin: 16px 0;
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
 }
 
-
+.socialmedia a {
+    text-decoration: none;
+}
 
 .hero {
     position: relative;
 }
 
 .hero img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
 }
 
 .hero h1 {
@@ -83,15 +61,18 @@ p {
     width: 100%;
     padding: 16px;
     text-align: center;
+    opacity: 0.85;
     background-color: var(--accent1-color);
     color: var(--accent2-color);
-    opacity: 0.85;
 }
 
 .hero article {
-    margin: 16px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 240, 245, 0.9);
     padding: 16px;
-    background-color: var(--accent2-color);
+    max-width: 300px;
 }
 
 .hero article img {
@@ -100,19 +81,11 @@ p {
     margin-left: 16px;
 }
 
-
-
-
-nav, p, section,article {
-    margin: 16px 0;
-    padding: 8px;
-}
-
-
-
 footer {
     background-color: var(--primary-color);
     text-align: center;
+    padding: 16px;
+    color: var(--accent1-color);
 }
 
 .socialmedia {
@@ -120,26 +93,10 @@ footer {
 }
 
 .socialmedia a {
-    text-decoration: none;
     margin: 0 8px;
 }
 
 .socialmedia img {
     width: 40px;
     height: auto;
-}
-
-.hero article {
-    position: absolute;
-    /* add this */
-    bottom: 20px;
-    /* distance from bottom of hero image */
-    left: 20px;
-    /* distance from left edge */
-    margin: 0;
-    /* remove margin so it doesn’t affect positioning */
-    padding: 16px;
-    background-color: var(--accent2-color);
-    max-width: 300px;
-    /* optional: keeps the article from stretching too wide */
 }
