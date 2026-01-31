@@ -128,3 +128,18 @@ footer {
     width: 40px;
     height: auto;
 }
+
+.hero article {
+    position: absolute;
+    /* add this */
+    bottom: 20px;
+    /* distance from bottom of hero image */
+    left: 20px;
+    /* distance from left edge */
+    margin: 0;
+    /* remove margin so it doesn’t affect positioning */
+    padding: 16px;
+    background-color: var(--accent2-color);
+    max-width: 300px;
+    /* optional: keeps the article from stretching too wide */
+}
