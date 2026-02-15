@@ -3,7 +3,7 @@
     --secondary-color: #c084fc;
     --accent1-color: #5a2a4f;
     --accent2-color: #fff0f5;
-    --heading-font: "Georgia", "Times New Roman", serif;
+    --white: #ffffff;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
@@ -15,120 +15,135 @@
 
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
     background-color: var(--accent2-color);
 }
 
 header,
 main,
 footer {
-    width: 840px;
+    width: 90%;
+    max-width: 960px;
     margin: 0 auto;
 }
 
-/* USES --primary-color (fixes unused variable audit error) */
+/* HEADER & NAV */
 header {
-    border-bottom: 4px solid var(--primary-color);
-}
-
-/* Headings */
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--accent1-color);
-}
-
-nav,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-header {
-    display: grid;
-    grid-template-columns: 150px;
-    /* auto; */
-    gap: 1rem; 
-    background-color: var(--accent1-color);
-
-}
-
-nav {
     display: flex;
-    justify-content: space-around;
-}
-
-nav a{
-    color: var(--white);
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    /* Dark like the wireframe */
     padding: 1rem;
 }
-nav a :hover{
-    color:var(--accent1-color);
-    background-color: var(--white);
 
+header img.logo {
+    width: 80px;
 }
-/* HERO SECTION */
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* HERO */
 .hero {
     position: relative;
+    margin-top: 10px;
 }
 
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* Hero heading overlay */
 .hero h1 {
     position: absolute;
-    top: 20px;
+    top: 0;
     width: 100%;
-    padding: 16px;
     text-align: center;
-    opacity: 0.85;
-    background-color: var(--accent1-color);
-    color: var(--accent2-color);
-    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
 }
 
-/* Hero article overlay */
 .hero article {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgba(255, 240, 245, 0.9);
-    padding: 16px;
-   
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
 }
 
 .hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 16px;
-    /* margin-top: 30px; */
+    width: 150px;
+    margin-right: 20px;
+}
+
+/* HISTORY SECTION - THE WIREFRAME FIX */
+.history {
+    display: grid;
+    /* Column 1: Text | Column 2: Fixed Image Width | Column 3: Text */
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+.history h2 {
+    grid-column: 1 / -1;
+    /* Header spans all 3 columns */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.history-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* ADVENTURE GRID */
+.adventure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.adventure-grid img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
 }
 
 /* FOOTER */
 footer {
-    background-color: var(--secondary-color);
-    color: var(--accent2-color);
-    text-align: center;
-    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
 }
 
-/* SOCIAL MEDIA */
 .socialmedia {
-    margin-top: 8px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-    margin: 0 8px;
+    display: flex;
+    gap: 15px;
 }
 
 .socialmedia img {
-    width: 40px;
-    height: auto;
+    width: 30px;
+    filter: invert(1);
+    /* Makes icons white */
 }
-
