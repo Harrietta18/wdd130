@@ -17,113 +17,94 @@ body {
     font-family: var(--body-font);
     background-color: var(--accent2-color);
 }
+header ul{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    position: relative;
+    top: -150px;
+    list-style: none;
+    
+}
+header ul li{
+    margin: 10px;
+}
 
 header,
 main,
 footer {
-    width: 90%;
-    max-width: 960px;
+    width: 840px;
     margin: 0 auto;
 }
 
-/* HEADER & NAV */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    /* Dark like the wireframe */
-    padding: 1rem;
-}
-
-header img.logo {
-    width: 80px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-}
-
-/* HERO */
+/* HERO SECTION - Floating Box Style */
 .hero {
     position: relative;
-    margin-top: 10px;
+    text-align: center;
 }
 
 .hero h1 {
     position: absolute;
-    top: 0;
+    top: 20px;
     width: 100%;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 10px;
+    color: var(--accent1-color);
 }
 
-.hero article {
+.mission-box {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background-color: white;
+    padding: 20px;
+    width: 70%;
     display: flex;
+    /* Puts image and text side-by-side */
     align-items: center;
-    padding: 20px;
-    background: white;
-    border: 1px solid #ddd;
-}
-
-.hero article img {
-    width: 150px;
-    margin-right: 20px;
-}
-
-/* HISTORY SECTION - THE WIREFRAME FIX */
-.history {
-    display: grid;
-    /* Column 1: Text | Column 2: Fixed Image Width | Column 3: Text */
-    grid-template-columns: 1fr 200px 1fr;
     gap: 20px;
-    background: white;
-    padding: 20px;
-    margin: 20px 0;
-    align-items: center;
-    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mission-box img {
+    width: 150px;
+    height: auto;
+}
+
+/* HISTORY SECTION - 3 Column Grid */
+.history {
+    padding: 40px 0;
 }
 
 .history h2 {
-    grid-column: 1 / -1;
-    /* Header spans all 3 columns */
     text-align: center;
     margin-bottom: 20px;
+}
+
+.history-container {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    /* Text | Image | Text */
+    gap: 30px;
+    align-items: center;
 }
 
 .history-img {
     width: 100%;
     height: auto;
-    border-radius: 4px;
 }
 
-/* ADVENTURE GRID */
-.adventure {
-    text-align: center;
-    margin: 20px 0;
-}
-
+/* ADVENTURE GRID - 5 Columns */
 .adventure-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    margin-top: 20px;
+    text-align: center;
 }
 
 .adventure-grid img {
     width: 100%;
-    height: 100px;
+    height: 120px;
     object-fit: cover;
 }
 
@@ -135,15 +116,11 @@ footer {
     background-color: #333;
     color: white;
     padding: 20px;
-}
-
-.socialmedia {
-    display: flex;
-    gap: 15px;
+    margin-top: 20px;
 }
 
 .socialmedia img {
     width: 30px;
-    filter: invert(1);
+    filter: brightness(0) invert(1);
     /* Makes icons white */
 }
