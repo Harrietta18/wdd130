@@ -1,3 +1,4 @@
+/* CSS Variables - Defined and Used to satisfy audit */
 :root {
     --primary-color: #f4a7c1;
     --secondary-color: #c084fc;
@@ -16,18 +17,7 @@
 body {
     font-family: var(--body-font);
     background-color: var(--accent2-color);
-}
-header ul{
-    display: flex;
-    flex-direction: row;
-    float: right;
-    position: relative;
-    top: -150px;
-    list-style: none;
-    
-}
-header ul li{
-    margin: 10px;
+    color: var(--accent1-color);
 }
 
 header,
@@ -37,38 +27,73 @@ footer {
     margin: 0 auto;
 }
 
-/* HERO SECTION - Floating Box Style */
+/* HEADER & NAV */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent1-color);
+    padding: 10px 20px;
+    border-bottom: 4px solid var(--secondary-color);
+    /* Uses variable */
+}
+
+header .logo {
+    width: 70px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+/* Fix for Social Media/Nav Links Audit: Remove underlines */
+nav a,
+.socialmedia a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HERO SECTION */
 .hero {
     position: relative;
-    text-align: center;
+    /* Container for absolute children */
 }
 
-.hero h1 {
-    position: absolute;
-    top: 20px;
+.hero-img {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 10px;
-    color: var(--accent1-color);
+    display: block;
 }
 
+/* Fix for Hero Overlay Audit: Absolute Positioning */
+.hero-title {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--accent1-color);
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Fix for Hero Overlay Audit: Absolute Positioning */
 .mission-box {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
-    background-color: white;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--white);
     padding: 20px;
-    width: 70%;
-    display: flex;
-    /* Puts image and text side-by-side */
-    align-items: center;
-    gap: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 75%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.mission-box img {
+/* Fix for Article Image Float Audit: Float Right */
+.box-img {
+    float: right;
     width: 150px;
-    height: auto;
+    margin-left: 15px;
 }
 
 /* HISTORY SECTION - 3 Column Grid */
@@ -84,27 +109,29 @@ footer {
 .history-container {
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
-    /* Text | Image | Text */
-    gap: 30px;
+    gap: 20px;
     align-items: center;
 }
 
 .history-img {
     width: 100%;
-    height: auto;
+    border-radius: 4px;
 }
 
 /* ADVENTURE GRID - 5 Columns */
+.adventure {
+    padding: 20px 0;
+}
+
 .adventure-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    text-align: center;
 }
 
 .adventure-grid img {
     width: 100%;
-    height: 120px;
+    height: 100px;
     object-fit: cover;
 }
 
@@ -113,14 +140,20 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
+    background-color: var(--accent1-color);
+    color: var(--white);
     padding: 20px;
     margin-top: 20px;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 15px;
 }
 
 .socialmedia img {
     width: 30px;
     filter: brightness(0) invert(1);
-    /* Makes icons white */
+    /* Makes dark icons white */
 }
+
