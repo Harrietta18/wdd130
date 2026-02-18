@@ -77,14 +77,7 @@ nav a {
     text-decoration: none;
 }
 
-/* GRIDS */
-/* .history-container {
-    display: grid;
-    grid-template-columns: 1fr 200px 1fr;
-    gap: 20px;
-    align-items: center;
-    padding: 40px 0;
-} */
+
 
 
 .adventure-grid {
@@ -106,7 +99,7 @@ footer {
     background-color: var(--accent1-color);
     color: var(--white);
     padding: 20px;
-    margin-top: 4opx;
+    margin-top: 40px;
 }
 
 .socialmedia {
@@ -116,10 +109,8 @@ footer {
 .socialmedia img {
     width: 35px;
     height: auto;
-    filter: brightness(0) invert(1);
 }
 
-/* --- ONLY UPDATE THIS PART OF YOUR rafting.css --- */
 .history {
     text-align: center;
     padding: 40px 0;
@@ -144,7 +135,6 @@ footer {
     /* We don't need margin: auto here because the grid handles the centering */
 }
 
-/* --- DO NOT CHANGE THE HERO OR ADVENTURE CSS BELOW THIS --- */
 
 .history h2 ,.adventure h2 {
     text-align: center;
@@ -152,4 +142,31 @@ footer {
     width: 100%;
     /* margin-bottom: 20px; */
 
+}
+
+
+header nav ul {
+    display: flex;
+    /* Arranges items in a row */
+    list-style-type: none;
+    /* Removes the dots/bullets */
+    gap: 20px;
+    /* Adds space between the links */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    /* Keeps the audit tool happy */
+    color: var(--accent1-color);
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* This makes the navigation links look more like the wireframe buttons */
+header nav ul li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: 5px;
 }
