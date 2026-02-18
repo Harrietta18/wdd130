@@ -7,7 +7,7 @@
     <title>Contact Us | White Water Rafting</title>
     <meta name="author" content="Erhurhe Harrietta">
     <meta name="description"
-      content="Get in touch with White Water Rafting for your next adventure in Kolob, California.">
+      content="Contact White Water Rafting Company for questions, reservations, or feedback.">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
@@ -19,24 +19,23 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="trips.html">Trips</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="contact-top">
-            <div class="contact-info-box">
-                <h1>White Water Rafting Company</h1>
-                <p><strong>Address:</strong> 123 Main River Street, Kolob, California</p>
-                <p><strong>Phone:</strong> +1 999 999 9999</p>
-                <p><strong>Email:</strong> info@whitewater.com</p>
-            </div>
             <div class="map-box">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10194.021263628609!2d3.4613476751756553!3d6.453773023011683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1771456222975!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
-                  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3000!2d-111.9!3d43.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v123456789"
+                  loading="lazy"></iframe>
+            </div>
+            <div class="contact-details">
+                <h1>White Water Rafting Company</h1>
+                <p>123 Main River Street<br>Kolob, California</p>
+                <p>📞 +1 999 999 9999</p>
+                <p>✉️ info@whitewater.com</p>
             </div>
         </section>
 
@@ -56,11 +55,11 @@
 
                 <fieldset>
                     <legend>Message Purpose</legend>
-                    <label><input type="radio" name="message_purpose" value="general"> General
+                    <label><input type="radio" id="general" name="purpose" value="general"> General
                         Inquiry</label>
-                    <label><input type="radio" name="message_purpose" value="reservation">
+                    <label><input type="radio" id="reservation" name="purpose" value="reservation">
                         Reservation Question</label>
-                    <label><input type="radio" name="message_purpose" value="website"> Website
+                    <label><input type="radio" id="website" name="purpose" value="website"> Website
                         Suggestion</label>
                 </fieldset>
 
@@ -71,9 +70,8 @@
                 </div>
 
                 <div class="form-item checkbox-row">
-                    <input type="checkbox" id="subscribe_news" name="subscribe_news">
-                    <label for="subscribe_news">Please subscribe me to the monthly
-                        newsletter</label>
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    <label for="subscribe">Please subscribe me to the monthly newsletter</label>
                 </div>
 
                 <button type="submit">Get in Touch!</button>
@@ -84,7 +82,7 @@
             <h2>We Are Here to Serve You</h2>
             <div class="employee-grid">
                 <figure>
-                    <img src="images/employee1.jpg" alt="Team Manager">
+                    <img src="images/employee1.jpg" alt="Manager">
                     <figcaption>Manager</figcaption>
                 </figure>
                 <figure>
@@ -92,19 +90,19 @@
                     <figcaption>Lead Guide</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/employee3.jpg" alt="Safety Instructor">
-                    <figcaption>Safety Instructor</figcaption>
+                    <img src="images/employee3.jpg" alt="Support Staff">
+                    <figcaption>Support Staff</figcaption>
                 </figure>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 White Water Rafting | Erhurhe Harrietta</p>
+        <p>© 2026 White Water Rafting | Erhurhe Harrietta</p>
         <nav class="socialmedia">
-            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+            <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>
         </nav>
     </footer>
 </body>
