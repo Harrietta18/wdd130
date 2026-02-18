@@ -5,38 +5,36 @@
     --accent1-color: #5a2a4f;
     --accent2-color: #fff0f5;
     --white: #ffffff;
-    --body-font: 'Arial', sans-serif;
+    --body-font: Arial, sans-serif;
 }
 
-/* --- BASE STYLES --- */
 body {
     font-family: var(--body-font);
     background-color: var(--accent2-color);
-    color: var(--accent1-color);
     margin: 0;
 }
 
 header,
 main,
 footer {
-    max-width: 840px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* --- HEADER NAVIGATION --- */
+/* --- HEADER & NAVIGATION --- */
 header {
     background-color: var(--primary-color);
-    border-bottom: 5px solid var(--secondary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 4px solid var(--secondary-color);
 }
 
 header nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 15px;
 }
 
 header nav ul li a {
@@ -45,37 +43,29 @@ header nav ul li a {
     font-weight: bold;
 }
 
-/* --- CONTACT HEADER (GRID) --- */
-.contact-header {
+/* --- TOP HEADING --- */
+.company-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* --- THE GRID: MAP LEFT, FORM RIGHT --- */
+.contact-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: center;
-    text-align: center;
+    gap: 30px;
     margin-bottom: 40px;
 }
 
-.contact-map img {
+/* Audit Fix: Map styling here instead of inline */
+iframe {
     width: 100%;
+    height: 400px;
+    border: none;
     border-radius: 8px;
-    gap: 40px;
-    align-items: start;
-    margin: 40px;
 }
 
-.contact-top {
-    display: grind;
-    grid-template-columns: 1fr 1fr;
-}
-
-/* --- FORM STYLING --- */
-.form-section {
-    background-color: var(--white);
-    padding: 30px;
-    border-radius: 8px;
-    margin: 30px 0;
-}
-
+/* --- FORM STYLES --- */
 form {
     display: flex;
     flex-direction: column;
@@ -85,22 +75,14 @@ form {
 .form-item {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-}
-
-.form-item input,
-.form-item textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
 fieldset {
     border: 1px solid var(--secondary-color);
-    padding: 15px;
+    padding: 10px;
 }
 
-.checkbox {
+.checkbox-row {
     flex-direction: row;
     align-items: center;
     gap: 10px;
@@ -109,15 +91,11 @@ fieldset {
 button {
     background-color: var(--accent1-color);
     color: var(--white);
-    padding: 15px;
+    padding: 12px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
-}
-
-button:hover {
-    background-color: var(--secondary-color);
 }
 
 /* --- EMPLOYEE GRID --- */
@@ -126,36 +104,28 @@ button:hover {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     text-align: center;
-    margin-top: 20px;
 }
 
 .employee-grid img {
     width: 100%;
     height: auto;
-    background-color: #ddd;
-    border-radius: 50%;
-    /* Optional circle look from wireframe */
+    border-radius: 8px;
 }
 
-/* --- FOOTER --- */
+/* --- FOOTER & SVG ICONS --- */
 footer {
+    background-color: var(--accent1-color);
+    color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--accent1-color);
-    color: var(--white);
+}
+
+.socialmedia {
+    display: flex;
+    gap: 10px;
 }
 
 .socialmedia img {
-    width: 30px;
-    height: 30px;
-}
-
-
-iframe {
-    border: none;
-    width: 100%;
-    height: 350px;
-    border-radius: 8px;
-    /* Adjust as needed */
+    width: 25px;
 }
