@@ -78,18 +78,19 @@ nav a {
 }
 
 /* GRIDS */
-.history-container {
+/* .history-container {
     display: grid;
     grid-template-columns: 1fr 200px 1fr;
     gap: 20px;
     align-items: center;
     padding: 40px 0;
-}
+} */
+
 
 .adventure-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    gap: 20px;
 }
 
 .adventure-grid img {
@@ -105,9 +106,50 @@ footer {
     background-color: var(--accent1-color);
     color: var(--white);
     padding: 20px;
+    margin-top: 4opx;
 }
 
+.socialmedia {
+    display: flex;
+    gap: 15px;
+}
 .socialmedia img {
-    width: 30px;
+    width: 35px;
+    height: auto;
     filter: brightness(0) invert(1);
+}
+
+/* --- ONLY UPDATE THIS PART OF YOUR rafting.css --- */
+.history {
+    text-align: center;
+    padding: 40px 0;
+}
+.history-container {
+    display: grid;
+    /* This creates 3 columns: Text | Image | Text */
+    /* '1fr' means the text takes up the remaining space equally */
+    grid-template-columns: 1fr 300px 1fr;
+    gap: 20px;
+    align-items: center;
+    text-align: left;
+    /* This keeps the text and image level in the middle */
+    margin-top: 20px;
+}
+
+.history-img {
+    width: 100%;
+    /* This makes the image fill its 300px column perfectly */
+    height: auto;
+    border-radius: 5px;
+    /* We don't need margin: auto here because the grid handles the centering */
+}
+
+/* --- DO NOT CHANGE THE HERO OR ADVENTURE CSS BELOW THIS --- */
+
+.history h2 ,.adventure h2 {
+    text-align: center;
+    margin: 30px 0 20px;
+    width: 100%;
+    /* margin-bottom: 20px; */
+
 }
