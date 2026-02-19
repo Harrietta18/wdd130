@@ -69,8 +69,6 @@ footer {
 .socialmedia img {
     width: 30px;
     height: 30px;
-    /* Requirement: Turns black SVGs white */
-    filter: brightness(0) invert(1);
 }
 
 /* --- INDEX PAGE: HERO (Absolute Positioning) --- */
